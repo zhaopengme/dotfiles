@@ -52,6 +52,7 @@ pearcleaner
 popclip
 reqable
 rustdesk
+only-switch
 
 # Design & Graphics
 inkscape
