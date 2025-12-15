@@ -1,10 +1,23 @@
-antigravity
-chatgpt
+# IDE & Code Editors
 claude-code
-codex
+cursor
 cursor-cli
 datagrip
-droid
+goland
+intellij-idea-ce
+jd-gui
+zed
+
+# Terminal & System Tools
+ghostty
+hammerspoon
+karabiner-elements
+openinterminal
+orbstack
+tailscale
+tailscale-app
+
+# Fonts
 font-comic-shanns-mono-nerd-font
 font-lxgw-bright-gb
 font-lxgw-wenkai
@@ -12,35 +25,40 @@ font-maple-mono
 font-maple-mono-cn
 font-maple-mono-nf
 font-maple-mono-nf-cn
-ghostty
-goland
+
+# Development Tools
+codex
 gpg-suite
-hammerspoon
-inkscape
-input-source-pro
-intellij-idea-ce
-jd-gui
-karabiner-elements
-keka
-lark
-microsoft-auto-update
-omnidisksweeper
-openinterminal
-orbstack
-pearcleaner
-popclip
-qq
-reqable
-rustdesk
-tailscale
-tailscale-app
 xcodes
 xcodes-app
-zed
-homerow
-telegram
-cursor
-microsoft-edge
-jordanbaird-ice
+
+# AI & Chat
+chatgpt
+lark
+
+# Utilities
+antigravity
 contexts
+droid
+homerow
+input-source-pro
+jordanbaird-ice
+keka
+microsoft-auto-update
+microsoft-edge
 mos
+omnidisksweeper
+pearcleaner
+popclip
+reqable
+rustdesk
+
+# Design & Graphics
+inkscape
+
+# Communication
+qq
+telegram
+
+# System Preferences
+macOS preferences configured via scripts/macos-prefs.zsh

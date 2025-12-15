@@ -1,32 +1,41 @@
-bat
-bottom
-coreutils
-direnv
-fd
-findutils
-fzf
-git
-git-lfs
-gnu-sed
-htop
-jq
-mise
-moreutils
-ncdu
-neovim
-ripgrep
-the_silver_searcher
-tmux
-tree
-wget
-zoxide
+# 日常高频使用
 zsh
-zsh-autocomplete
+git
+tmux
+fzf
+ripgrep
+neovim
+gh
+
+# Zsh 增强配置
 zsh-autosuggestions
 zsh-completions
+zsh-syntax-highlighting
 zsh-fast-syntax-highlighting
 zsh-history-substring-search
-zsh-syntax-highlighting
+zsh-autocomplete
+
+# 开发工具
+bat
+jq
+fd
+mise
+direnv
+git-lfs
+gnu-sed
+coreutils
+findutils
+moreutils
+
+# 系统监控与分析
+bottom
+htop
+ncdu
+
+# 辅助工具
+wget
+tree
+zoxide
+the_silver_searcher
 lazyssh
-gh
 opencode
