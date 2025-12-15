@@ -59,6 +59,3 @@ inkscape
 # Communication
 qq
 telegram
-
-# System Preferences
-macOS preferences configured via scripts/macos-prefs.zsh
