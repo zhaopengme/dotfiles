@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+
+# ============================================
+# .zprofile - 登录 Shell 配置
+# ============================================
+# 这个文件在登录 shell 时加载（在 .zshrc 之前）
+# 适合设置一次性的环境初始化
+
+# ============================================
+# Homebrew 环境初始化
+# ============================================
+# brew shellenv 会设置 HOMEBREW_* 变量和添加 PATH
+# 但因为我们在 .zshenv 中已经设置了 PATH，这里主要是设置其他 Homebrew 变量
+if [[ -x "/opt/homebrew/bin/brew" ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# ============================================
+# OrbStack 集成
+# ============================================
+# Added by OrbStack: command-line tools and integration
+if [[ -f "$HOME/.orbstack/shell/init.zsh" ]]; then
+  source "$HOME/.orbstack/shell/init.zsh" 2>/dev/null || :
+fi

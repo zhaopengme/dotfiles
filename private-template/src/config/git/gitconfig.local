@@ -1,0 +1,71 @@
+# Private Git config (local overlay)
+#
+# This file is meant to be linked to: ~/.gitconfig.local
+# Your public dotfiles should include it from ~/.gitconfig (already supported in your repo).
+#
+# Keep anything personal/work-specific here:
+# - user.name / user.email
+# - signing key and commit signing preferences
+# - company proxy / URL rewrites
+# - per-host credential helpers (if needed)
+
+[user]
+    name = Your Name
+    email = your@email.com
+    # If you use SSH signing:
+    # signingkey = ~/.ssh/id_ed25519.pub
+    #
+    # If you use GPG signing (example key id):
+    # signingkey = ABCDEF1234567890
+
+[commit]
+    # Prefer enabling signing here (private) rather than in public config.
+    # gpgsign = true
+    gpgsign = false
+
+[gpg]
+    # If you use GPG signing, ensure this points to your gpg binary.
+    # On Apple Silicon Homebrew:
+    # program = /opt/homebrew/bin/gpg
+    #
+    # On Intel Homebrew:
+    # program = /usr/local/bin/gpg
+    #
+    # Keep it commented unless you really need it.
+    # program = /opt/homebrew/bin/gpg
+
+# SSH commit signing (Git >= 2.34)
+# Uncomment to use SSH keys for signing instead of GPG:
+#
+# [gpg]
+#     format = ssh
+# [gpg "ssh"]
+#     allowedSignersFile = ~/.config/git/allowed_signers
+# [commit]
+#     gpgsign = true
+
+# Optional: rewrite company git URLs
+# Example: map https://github.com/ to ssh
+#
+# [url "git@github.com:"]
+#     insteadOf = https://github.com/
+#
+# Example: internal Git server shortcuts
+# [url "git@github.corp.com:"]
+#     insteadOf = https://github.corp.com/
+
+# Optional: proxy (keep it private)
+# [http]
+#     proxy = http://127.0.0.1:7890
+# [https]
+#     proxy = http://127.0.0.1:7890
+
+# Optional: credential helper tweaks
+# [credential]
+#     helper = osxkeychain
+
+# Optional: per-directory identity (advanced)
+# Better handled via includeIf in ~/.gitconfig.local if you want to split work/personal:
+#
+# [includeIf "gitdir:~/work/"]
+#     path = ~/.config/git/work.gitconfig

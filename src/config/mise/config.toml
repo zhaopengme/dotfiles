@@ -1,0 +1,12 @@
+[tools]
+bun = "1.2"
+go = "1.23"
+java = "zulu-17.58.21.0"
+maven = "3.8.6"
+node = "22"
+python = "3.11"
+rust = "1.89.0"
+
+[settings]
+idiomatic_version_file_enable_tools = ["python"]
+

@@ -1,0 +1,84 @@
+# ~/.zshrc.local (private overlay)
+#
+# This file is intended to live in your PRIVATE repo and be symlinked to:
+#   ~/.zshrc.local
+#
+# The PUBLIC dotfiles should source it (if present) near the end of ~/.zshrc:
+#   [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
+#
+# Keep sensitive values out of here if possible. Prefer:
+# - macOS Keychain / 1Password / secure prompts
+# - git-secret-managed files restored by your private repo (e.g. tokens.env)
+#
+# If you *must* store secrets in a file, put them in an encrypted file and
+# have your private `secret-helper.zsh` restore them to a secure location,
+# then source that file from here.
+
+# ------------------------------------------------------------------------------
+# Profile / machine flags (optional)
+# ------------------------------------------------------------------------------
+# Example:
+# export DOTFILES_PROFILE="${DOTFILES_PROFILE:-personal}" # personal|work
+# export DOTFILES_MACHINE="${DOTFILES_MACHINE:-macbook}"  # macbook|mini
+
+# ------------------------------------------------------------------------------
+# Private PATH / toolchain overlays
+# ------------------------------------------------------------------------------
+# Example:
+# export PATH="$HOME/.local/bin:$PATH"
+
+# ------------------------------------------------------------------------------
+# Private environment variables (prefer non-sensitive config here)
+# ------------------------------------------------------------------------------
+# Example:
+# export HOMEBREW_NO_ANALYTICS=1
+
+# ------------------------------------------------------------------------------
+# Proxy / network (example - keep it private; avoid committing credentials)
+# ------------------------------------------------------------------------------
+# export ALL_PROXY="http://127.0.0.1:7890"
+# export HTTP_PROXY="$ALL_PROXY"
+# export HTTPS_PROXY="$ALL_PROXY"
+# export NO_PROXY="localhost,127.0.0.1,.local"
+
+# ------------------------------------------------------------------------------
+# Company/work-specific helpers (examples)
+# ------------------------------------------------------------------------------
+# alias vpnup="..."
+# alias vpndown="..."
+# function workon() { export DOTFILES_PROFILE=work; }
+
+# ------------------------------------------------------------------------------
+# Load private env file restored by git-secret (recommended pattern)
+# ------------------------------------------------------------------------------
+# Your private repo can restore this file from an encrypted secret:
+#   ~/.config/private/tokens.env
+#
+# That file should be chmod 600 and contain only `export KEY=VALUE` lines.
+PRIVATE_TOKENS_ENV="$HOME/.config/private/tokens.env"
+if [[ -f "$PRIVATE_TOKENS_ENV" ]]; then
+  # shellcheck disable=SC1090
+  source "$PRIVATE_TOKENS_ENV"
+fi
+
+# ------------------------------------------------------------------------------
+# SSH agent / 1Password (optional)
+# ------------------------------------------------------------------------------
+# If you use 1Password SSH agent, usually you don't need to run ssh-agent here.
+# Put any local setup required by your environment below.
+#
+# Example (only if you know you need it):
+# export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+# ------------------------------------------------------------------------------
+# Private aliases
+# ------------------------------------------------------------------------------
+# alias k="kubectl"
+# alias tf="terraform"
+# alias gco="git checkout"
+
+# ------------------------------------------------------------------------------
+# Private prompt tweaks (optional)
+# ------------------------------------------------------------------------------
+# If you keep a separate theme config privately:
+# [[ -f "$HOME/.p10k.local.zsh" ]] && source "$HOME/.p10k.local.zsh"

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# 保留原先 LM Studio CLI 的 PATH 设置（如果存在）
+if [[ -d "$HOME/.cache/lm-studio/bin" ]]; then
+  export PATH="$PATH:$HOME/.cache/lm-studio/bin"
+fi
+
+# 如果当前是交互式 shell 且存在 zsh，则自动切换到 zsh
+if [[ -t 1 && "$SHELL" != *"zsh" ]] && command -v zsh >/dev/null 2>&1; then
+  exec zsh -l
+fi
+
+
+# LM Studio CLI (lms)
+# Avoid hardcoding absolute /Users/<name>/ paths so this config is portable.
+# If LM Studio CLI is installed under $HOME, prefer that:
+if [[ -d "$HOME/.lmstudio/bin" ]]; then
+  export PATH="$PATH:$HOME/.lmstudio/bin"
+fi
+# End of LM Studio CLI section

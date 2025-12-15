@@ -1,0 +1,91 @@
+#!/usr/bin/env zsh
+
+# ============================================
+# .zshenv - 核心环境变量配置
+# ============================================
+# 这个文件在所有 zsh 实例中都会加载（login/non-login, interactive/non-interactive）
+# 适合设置 PATH 和核心环境变量
+# 注意：不要在这里输出任何内容，会影响非交互式脚本
+
+# ============================================
+# 编辑器配置
+# ============================================
+export EDITOR=nvim
+export VISUAL=nvim
+
+# ============================================
+# 语言和编码
+# ============================================
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+
+# ============================================
+# GPG 配置
+# ============================================
+export GPG_TTY=$(tty)
+
+# ============================================
+# Homebrew 配置
+# ============================================
+export HOMEBREW_PREFIX="/opt/homebrew"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+# export HOMEBREW_NO_INSTALL_FROM_API=1
+
+# ============================================
+# PATH 配置 - 使用 typeset -U 确保路径唯一
+# ============================================
+typeset -U path  # 确保 PATH 中的路径不重复
+
+# 基础系统路径
+path=(
+  $HOMEBREW_PREFIX/bin
+  $HOMEBREW_PREFIX/sbin
+  /usr/local/bin
+  /System/Cryptexes/App/usr/bin
+  /usr/bin
+  /bin
+  /usr/sbin
+  /sbin
+  /Library/Apple/usr/bin
+  $path
+)
+
+# 用户自定义路径
+path=(
+  $HOME/.bin
+  $HOME/.dotfiles/bin
+  $HOME/.local/bin
+  $path
+)
+
+# 条件添加语言工具路径
+[[ -d "$HOME/go/bin" ]] && path+=("$HOME/go/bin")
+[[ -d "$HOME/.go/bin" ]] && path+=("$HOME/.go/bin")
+[[ -d "$HOME/.cargo/bin" ]] && path+=("$HOME/.cargo/bin")
+
+# tmux 工具路径
+[[ -d "$HOME/.config/tmux/bin" ]] && path+=("$HOME/.config/tmux/bin")
+
+# LM Studio 路径
+[[ -d "$HOME/.cache/lm-studio/bin" ]] && path+=("$HOME/.cache/lm-studio/bin")
+[[ -d "$HOME/.lmstudio/bin" ]] && path+=("$HOME/.lmstudio/bin")
+
+# Bun 路径
+[[ -d "$HOME/.bun/bin" ]] && path+=("$HOME/.bun/bin")
+
+# 导出 PATH
+export PATH
+
+# ============================================
+# 其他核心环境变量
+# ============================================
+# Don't clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# 极空间工具路径（如果存在）
+if [[ -d "/Applications/极空间.app/Contents/Resources/app.asar.unpacked/bin/platform-tools" ]]; then
+  export SCRCPY_SERVER_PATH="/Applications/极空间.app/Contents/Resources/app.asar.unpacked/bin/platform-tools/scrcpy-server"
+  path+=("/Applications/极空间.app/Contents/Resources/app.asar.unpacked/bin/platform-tools")
+fi
+
+export TERM=xterm-256color
