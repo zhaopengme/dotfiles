@@ -55,6 +55,7 @@ popclip
 reqable
 rustdesk
 only-switch
+onedrive
 
 # Design & Graphics
 inkscape

@@ -24,6 +24,7 @@ main() {
       "$SCRIPT_DIR/scripts/macos-check.zsh"
       "$SCRIPT_DIR/scripts/brew-install.zsh"
       "$SCRIPT_DIR/scripts/oh-my-zsh-install.zsh"
+      "$SCRIPT_DIR/scripts/zsh-plugins-install.zsh"
       "$SCRIPT_DIR/scripts/bash-profile-bootstrap.zsh"
       "$SCRIPT_DIR/scripts/link-dotfiles.zsh"
       "$SCRIPT_DIR/scripts/mise-setup.zsh"
