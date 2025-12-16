@@ -32,6 +32,7 @@ gpg-suite
 xcodes
 xcodes-app
 orbstack
+httpie-desktop
 
 # AI & Chat
 chatgpt
