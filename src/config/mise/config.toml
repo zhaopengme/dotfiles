@@ -9,4 +9,4 @@ rust = "1.89.0"
 
 [settings]
 idiomatic_version_file_enable_tools = ["python"]
-
+auto_install = true
