@@ -10,3 +10,8 @@
 if [[ -f ~/.envconfig.local ]]; then
   source ~/.envconfig.local
 fi
+
+alias pyv='python3 -m venv .venv'
+alias pya='source .venv/bin/activate'
+alias pyd='deactivate'
+alias pyi='pip install -r requirements.txt'
