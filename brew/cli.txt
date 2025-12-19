@@ -44,4 +44,5 @@ cliproxyapi
 oath-toolkit
 trzsz
 trzsz-go
+trzsz-ssh
 ffmpeg
