@@ -37,6 +37,7 @@ httpie-desktop
 # AI & Chat
 chatgpt
 lark
+wechat
 
 # Utilities
 antigravity
