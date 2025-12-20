@@ -40,9 +40,10 @@ the_silver_searcher
 lazyssh
 opencode
 gemini-cli
-#cliproxyapi
+cliproxyapi
 oath-toolkit
 trzsz
 trzsz-go
 trzsz-ssh
 ffmpeg
+
