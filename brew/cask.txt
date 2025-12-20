@@ -33,6 +33,7 @@ xcodes
 xcodes-app
 orbstack
 httpie-desktop
+antigravity
 
 # AI & Chat
 chatgpt
