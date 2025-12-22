@@ -26,6 +26,7 @@ gnu-sed
 coreutils
 findutils
 moreutils
+raine/workmux/workmux
 
 # 系统监控与分析
 bottom
