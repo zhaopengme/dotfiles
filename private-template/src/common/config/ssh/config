@@ -1,0 +1,7 @@
+# SSH config template (do not store private keys in git)
+#
+# Host my-server
+#   HostName 1.2.3.4
+#   User ubuntu
+#   IdentityFile ~/.ssh/id_ed25519
+
