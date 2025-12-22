@@ -5,7 +5,7 @@
 - macOS：开发环境（Zsh、tmux、Neovim、Git、Ghostty、mise、常用 CLI/GUI 工具）
 - Linux：仅支持 **Ubuntu/Debian 服务器（无 GUI）**，并统一使用 **Linuxbrew**（Zsh、tmux、Neovim、Git、mise）
 
-本仓库**不包含任何敏感信息**。你自己的身份信息（Git name/email）、SSH 配置、token 等请使用私有仓库管理（本仓库提供模板：`private-template/`）。
+本仓库**不包含任何敏感信息**。你自己的身份信息（Git name/email）、SSH 配置、token 等请使用私有仓库管理（参考 `docs/private-repo-template/`）。
 
 ---
 
@@ -14,7 +14,7 @@
 - 一套可重复执行的安装流程：OS 检测 → 安装 Homebrew/Linuxbrew & 包 → 链接配置 → mise 初始化
 - 统一的配置源目录：`src/common/config/` + `src/{macos,linux}/config/`（内容被 symlink 到 `$HOME`）
 - 可选的 macOS 偏好设置脚本：`scripts/macos/prefs.zsh`
-- 私有仓库模板：`private-template/`（用于 git-secret 管理敏感文件并恢复到本机）
+- 私有仓库模板设计：`docs/private-repo-template/`（跨平台：macOS + Ubuntu/Debian）
 
 ---
 
@@ -66,8 +66,7 @@ zsh scripts/macos/prefs.zsh
 - token / API keys / 内部服务配置
 - 公司相关工具清单（brew private packages）
 
-本仓库自带一个私有模板目录：`private-template/`  
-你可以把它复制为一个独立的私有仓库（例如 `~/.dotfiles-private`），并按模板文档使用 `git-secret` 管理敏感文件。
+参考 `docs/private-repo-template/` 创建一个独立的私有仓库（例如 `~/.dotfiles-private`），并按模板文档管理敏感文件（可选：`git-secret`/`sops` 等）。
 
 私有仓库建议生成/维护三个 overlay 文件（由公共配置加载）：
 - `~/.gitconfig.local`
@@ -98,7 +97,7 @@ zsh scripts/macos/prefs.zsh
 │   ├── common/config/       # 默认通用配置（所有 OS）
 │   ├── macos/config/        # macOS 覆盖（例如 ghostty、zprofile、ohmyzsh plugins）
 │   └── linux/config/        # Linux 覆盖（Ubuntu/Debian + Linuxbrew）
-└── private-template/   # 私有仓库模板（git-secret + ssh config + tokens 等）
+└── docs/private-repo-template/ # 私有仓库模板设计（跨平台）
 ```
 
 ---
@@ -137,7 +136,7 @@ zsh scripts/common/link-dotfiles.zsh
 - `~/.gitconfig.local`：Git 身份/签名/公司 rewrite
 - `~/.zshrc.local`：公司 alias、私有脚本入口等
 - `~/.envconfig.local`：机器差异/非敏感环境变量
-- 敏感文件：通过 `git-secret` 加密，reveal 后按 manifest 安装（参考 `private-template/`）
+- 敏感文件：建议加密管理（例如 `git-secret`/`sops`），并由私有仓库安装到本机
 
 ---
 
@@ -154,7 +153,7 @@ zsh install.zsh
 ## 安全说明
 
 - 本仓库不应包含：私钥、token、密码、任何敏感配置
-- 敏感内容请使用私有仓库（可基于 `private-template/`），并使用 `git-secret` 管理
+- 敏感内容请使用私有仓库（参考 `docs/private-repo-template/`），并使用加密工具管理
 
 ---
 

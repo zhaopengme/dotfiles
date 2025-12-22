@@ -1,0 +1,3 @@
+# Private extra CLI packages (macOS + Linuxbrew)
+# Put shared additions here; keep it small.
+
