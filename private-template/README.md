@@ -112,3 +112,29 @@ zsh scripts/secret-helper.zsh reveal-install
 安全建议：
 - 不建议把 SSH 私钥/长期 token 放进 git（即便加密）；优先使用 ssh-agent + 硬件密钥/系统钥匙串/密码管理器。
 - 如果你仍选择加密存放，务必限制仓库访问、启用 2FA、并定期轮转密钥与 token。
+
+---
+
+## bin（自用脚本）
+
+模板包含 `bin/` 目录，建议你把常用脚本放进去并提交到私有仓库。
+
+默认约定：
+- 私有仓库路径：`~/.dotfiles-private`
+- 脚本路径：`~/.dotfiles-private/bin`
+
+内置命令（都依赖上述固定路径）：
+- `dot-install`：安装 public + private
+- `dot-install-public`：只安装 public
+- `dot-install-private`：只安装 private
+- `dot-update`：`git pull --rebase` 两个仓库后重装
+- `dot-link`：只重做 symlink
+- `dot-status`：查看两个仓库状态
+- `dot-secrets`：调用 `scripts/secret-helper.zsh ...`
+- `dot-doctor`：环境自检（OS/brew/mise/TERM 等）
+
+如果你的私有仓库不在默认路径，请在 `~/.zshrc.local` 设置：
+
+```bash
+export DOTFILES_PRIVATE_ROOT="$HOME/path/to/your-private-repo"
+```
