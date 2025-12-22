@@ -1,0 +1,3 @@
+# Linux (Ubuntu/Debian server) additional Homebrew packages
+# Keep this list minimal; prefer putting shared CLI in packages/common/brew-cli.txt
+

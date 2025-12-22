@@ -1,0 +1,9 @@
+# Minimal required CLI packages (macOS + Linuxbrew / Ubuntu/Debian server)
+zsh
+git
+tmux
+neovim
+fzf
+ripgrep
+mise
+

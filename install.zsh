@@ -9,10 +9,10 @@ usage() {
 Usage: zsh install.zsh [command]
 
 Commands:
-  (empty) | base   Run basic setup: macOS check, Homebrew + packages, link dotfiles, mise setup
+  (empty) | base   Run setup: OS check, Homebrew/Linuxbrew + packages, oh-my-zsh, link dotfiles, mise install
   help             Show this help
 
-This script is intentionally simple; 后续所有定制通过编辑 src/config/* 和 brew/*.txt 完成。
+This script is intentionally simple; 后续所有定制通过编辑 src/**/config/* 和 packages/*.txt 完成。
 EOF
 }
 
@@ -21,13 +21,25 @@ main() {
 
   case "$cmd" in
     base)
-      "$SCRIPT_DIR/scripts/macos-check.zsh"
-      "$SCRIPT_DIR/scripts/brew-install.zsh"
-      "$SCRIPT_DIR/scripts/oh-my-zsh-install.zsh"
-      "$SCRIPT_DIR/scripts/zsh-plugins-install.zsh"
-      "$SCRIPT_DIR/scripts/bash-profile-bootstrap.zsh"
-      "$SCRIPT_DIR/scripts/link-dotfiles.zsh"
-      "$SCRIPT_DIR/scripts/mise-setup.zsh"
+      case "$(uname -s)" in
+        Darwin)
+          "$SCRIPT_DIR/scripts/macos/check.zsh"
+          "$SCRIPT_DIR/scripts/macos/brew-install.zsh"
+          ;;
+        Linux)
+          "$SCRIPT_DIR/scripts/linux/check.zsh"
+          "$SCRIPT_DIR/scripts/linux/brew-install.zsh"
+          ;;
+        *)
+          echo "Unsupported OS: $(uname -s)" >&2
+          exit 1
+          ;;
+      esac
+
+      "$SCRIPT_DIR/scripts/common/oh-my-zsh-install.zsh"
+      "$SCRIPT_DIR/scripts/common/zsh-plugins-install.zsh"
+      "$SCRIPT_DIR/scripts/common/link-dotfiles.zsh"
+      "$SCRIPT_DIR/scripts/common/mise-setup.zsh"
       ;;
     help|-h|--help)
       usage
