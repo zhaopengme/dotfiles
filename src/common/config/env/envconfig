@@ -5,6 +5,8 @@
 # export HTTP_PROXY=""
 # export HTTPS_PROXY=""
 
+export TERM=xterm-256color
+
 # Local env overlay (private/machine-specific)
 # If you use the private template, it will link ~/.envconfig.local for you.
 if [[ -f ~/.envconfig.local ]]; then
