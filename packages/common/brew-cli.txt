@@ -8,3 +8,6 @@ ripgrep
 mise
 opencode
 lazygit
+trzsz
+trzsz-go
+trzsz-ssh
