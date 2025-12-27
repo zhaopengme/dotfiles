@@ -9,7 +9,6 @@ mise
 opencode
 gemini-cli
 lazygit
-trzsz
 trzsz-go
 trzsz-ssh
 tiann/tap/hapi
