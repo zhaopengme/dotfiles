@@ -8,6 +8,7 @@ ripgrep
 mise
 opencode
 gemini-cli
+cloudflared
 lazygit
 trzsz-go
 trzsz-ssh
