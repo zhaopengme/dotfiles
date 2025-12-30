@@ -12,4 +12,4 @@ lazygit
 trzsz-go
 trzsz-ssh
 tiann/tap/hapi
-𝚓𝚗𝚜𝚊𝚑𝚊𝚓/𝚕𝚞𝚖𝚎𝚗/𝚕𝚞𝚖𝚎𝚗
+jnsahaj/lumen/lumen
