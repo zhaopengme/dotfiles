@@ -6,7 +6,7 @@ maven = "3.8.6"
 node = "22"
 python = "3.11"
 rust = "1.89.0"
-
+pnpm = "9.15.9"
 [settings]
 idiomatic_version_file_enable_tools = ["python"]
 auto_install = true
