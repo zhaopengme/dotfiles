@@ -55,4 +55,4 @@ alias m='mise'
 
 # 
 alias v="nvim"
-alias pyhttp='python3 -m http.server'
+alias http='python3 -m http.server'
