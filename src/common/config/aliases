@@ -51,3 +51,7 @@ alias dc='docker-compose'
 
 # --- Mise ---
 alias m='mise'
+
+
+# 
+alias v="nvim"
