@@ -1,5 +1,7 @@
 # Minimal required CLI packages (macOS + Linuxbrew / Ubuntu/Debian server)
 zsh
+eza
+bat
 git
 tmux
 neovim

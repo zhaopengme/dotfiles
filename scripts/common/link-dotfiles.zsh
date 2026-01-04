@@ -107,6 +107,7 @@ main() {
   link_rel "zsh/zshenv"   "$HOME/.zshenv"
   link_rel "zsh/zprofile" "$HOME/.zprofile"
   link_rel "zsh/zshrc"    "$HOME/.zshrc"
+  link_rel "aliases"      "$HOME/.aliases"
   link_rel "zsh/oh-my-zsh.sh" "$HOME/.oh-my-zsh.sh"
 
   # OS fragments (optional but recommended)
