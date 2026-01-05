@@ -3,3 +3,5 @@
 wget
 expect
 codex
+xclip
+
