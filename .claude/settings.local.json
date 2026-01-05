@@ -11,7 +11,9 @@
       "Bash(bash:*)",
       "WebSearch",
       "Bash(tree:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(/usr/local/bin/mac --help:*)",
+      "Bash(/home/zhaopeng/dotfiles/src/common/bin/im-select)"
     ]
   }
 }
