@@ -4,7 +4,7 @@ go = "1.23"
 java = "zulu-17.58.21.0"
 maven = "3.8.6"
 node = "22"
-python = "3.11"
+python = "3.12"
 rust = "1.89.0"
 pnpm = "9.15.9"
 [settings]
