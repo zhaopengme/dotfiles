@@ -39,3 +39,4 @@ cliproxyapi
 oath-toolkit
 ffmpeg
 daipeihust/tap/im-select
+pngpaste
