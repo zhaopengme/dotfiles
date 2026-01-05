@@ -66,17 +66,22 @@ macos-icon = custom
 macos-custom-icon = ~/.config/ghostty/ghostty-white.icns
 
 # 设定初始窗口尺寸（按网格：列x行）
-window-width = 220
-window-height = 55
-maximize = false
+#window-width = 220
+#window-height = 55
+maximize = true
 
 # 渲染与观感优化
 alpha-blending = linear-corrected
-background-opacity = 0.94
+background-opacity = 0.91
 background-opacity-cells = true
 macos-window-shadow = true
 window-step-resize = true
 unfocused-split-opacity = 0.85
+
+
+# create ghosttty window
+keybind = super+shift+n=new_window
+
 
 # ---- 快捷键（以 tmux 默认前缀 C-b 对齐：\x02）----
 # 新窗口 / 窗口切换 1-9
