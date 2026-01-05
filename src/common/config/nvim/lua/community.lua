@@ -12,6 +12,9 @@ return {
     -- AI
     -- { import = "astrocommunity.ai.opencode-nvim" },
 
+    -- Media
+    { import = "astrocommunity.media.img-clip-nvim" },
+
     -- bar
     { import = "astrocommunity.bars-and-lines.dropbar-nvim" },
 

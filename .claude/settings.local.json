@@ -9,7 +9,9 @@
       "Skill(superpowers:systematic-debugging)",
       "Bash(echo:*)",
       "Bash(bash:*)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(tree:*)",
+      "Bash(curl:*)"
     ]
   }
 }
