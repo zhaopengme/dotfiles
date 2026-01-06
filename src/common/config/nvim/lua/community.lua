@@ -9,8 +9,10 @@ return {
     { import = "astrocommunity.completion.copilot-lua-cmp" },
     -- { import = "astrocommunity.completion.avante-nvim" },
 
+    -- { import = "astrocommunity.completion.avante-nvim" },
+
     -- AI
-    -- { import = "astrocommunity.ai.opencode-nvim" },
+    { import = "astrocommunity.ai.opencode-nvim" },
 
     -- Media
     { import = "astrocommunity.media.img-clip-nvim" },
@@ -25,4 +27,6 @@ return {
     { import = "astrocommunity.pack.go" },
     { import = "astrocommunity.pack.java" },
     { import = "astrocommunity.pack.typescript-all-in-one" },
+
+    { import = "astrocommunity.lsp.nvim-java" },
 }
