@@ -43,7 +43,7 @@ clipboard-write = allow
 # 鼠标选择优先：按住 Shift 时扩展终端选区
 mouse-shift-capture = true
 
-font-family = TX-02
+font-family = TX-02, LXGW WenKai
 font-size = 14
 font-thicken = true
 # 已有 font-thicken，避免过度加粗
