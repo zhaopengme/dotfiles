@@ -19,6 +19,7 @@ return {
 
 	-- bar
 	{ import = "astrocommunity.bars-and-lines.dropbar-nvim" },
+	{ import = "astrocommunity.motion.hop-nvim" },
 
 	-- 语言包
 	{ import = "astrocommunity.pack.lua" },
