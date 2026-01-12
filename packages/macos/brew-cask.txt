@@ -59,6 +59,7 @@ reqable
 rustdesk
 only-switch
 onedrive
+alt-tab
 
 # Design & Graphics
 inkscape
