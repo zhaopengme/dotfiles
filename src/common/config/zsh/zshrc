@@ -207,3 +207,4 @@ fi
 if [[ -f "$HOME/.config/tmux/aliases.sh" ]]; then
   source "$HOME/.config/tmux/aliases.sh"
 fi
+export PATH="$HOME/.npm-global/bin:$PATH"
