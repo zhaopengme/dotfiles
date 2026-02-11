@@ -31,21 +31,21 @@ read_list() {
 
 install_formula() {
   local pkg="$1"
-  if brew list --formula "$pkg" >/dev/null 2>&1; then
+  if brew list --formula "$pkg" >/dev/null 2>&1 < /dev/null; then
     log "formula already installed: $pkg"
   else
     log "installing formula: $pkg"
-    brew install "$pkg"
+    brew install "$pkg" < /dev/null
   fi
 }
 
 install_cask() {
   local pkg="$1"
-  if brew list --cask "$pkg" >/dev/null 2>&1; then
+  if brew list --cask "$pkg" >/dev/null 2>&1 < /dev/null; then
     log "cask already installed: $pkg"
   else
     log "installing cask: $pkg"
-    brew install --cask "$pkg"
+    brew install --cask "$pkg" < /dev/null
   fi
 }
 
