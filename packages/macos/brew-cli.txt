@@ -22,7 +22,6 @@ gnu-sed
 coreutils
 findutils
 moreutils
-raine/workmux/workmux
 
 # Monitoring
 bottom

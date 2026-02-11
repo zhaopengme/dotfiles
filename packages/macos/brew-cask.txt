@@ -43,10 +43,8 @@ wechat
 # Utilities
 antigravity
 contexts
-droid
 homerow
 input-source-pro
-jordanbaird-ice
 keka
 microsoft-auto-update
 microsoft-edge
@@ -59,8 +57,7 @@ reqable
 rustdesk
 only-switch
 onedrive
-alt-tab
-
+thaw
 # Design & Graphics
 inkscape
 
