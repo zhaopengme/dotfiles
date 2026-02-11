@@ -16,3 +16,4 @@ trzsz-ssh
 tiann/tap/hapi
 jnsahaj/lumen/lumen
 jq
+mise
